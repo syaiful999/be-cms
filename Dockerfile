@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
-ARG SERVER_ENV=''
+# ARG SERVER_ENV=''
 WORKDIR /src/fms-python-service-dev
 COPY . .
-COPY app/env/$SERVER_ENV.env app/env/.env
+# COPY app/env/$SERVER_ENV.env app/env/.env
 RUN rm -rf appenv/
 RUN apt-get update
 RUN apt-get install -y python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
